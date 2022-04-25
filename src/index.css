@@ -1,13 +1,1132 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  list-style: 0;
+  text-decoration: 0;
+  box-sizing: border-box;
+  font-family: 'Arial';
+  font-size: 16px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ------------- Globals ----------------*/
+
+.container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.headpic img {
+  width: 100%;
+  height: auto;
+  margin: -200px 0 -400px 0;
+}
+
+button {
+  background-color: rgb(34, 127, 214);
+  border: none;
+  color: white;
+  padding: 10px;
+  font-size: 15px;
+  width: 120px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(121, 190, 255);
+}
+
+.text {
+  font-size: 18px;
+  letter-spacing: 0.2px;
+}
+
+h1 {
+  font-size: 40px;
+  font-family: "RalewaySemiBold";
+}
+
+@media(max-width: 1600px) {
+  .headpic img {
+    margin: -150px 0 -300px 0;
+  }
+}
+
+@media(max-width: 1400px) {
+  .headpic img {
+    margin: -80px 0 -210px 0;
+  }
+}
+
+@media(max-width: 1048px) {
+
+  .headpic img {
+    margin: 0 0 0 0;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+}
+
+
+
+/* ------------- NAVBAR ----------------*/
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav img {
+  float: left;
+  cursor: pointer;
+  width: 70px;
+  height: auto;
+  padding: 10px 0px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 35%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+}
+
+.nav-links font {
+  padding: 15px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+
+nav font:hover {
+  cursor: pointer;
+  color: green;
+}
+
+.langSel {
+  padding-left: 40px;
+  font-weight: bold;
+}
+
+.langSel:hover {
+  cursor: pointer;
+}
+
+#lang2 {
+  position: absolute;
+  padding-top: 10px;
+}
+
+.arrow {
+  display: inline-block;
+  margin-left: 6px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+}
+
+.mobile-nav {
+  padding: 5px;
+  border-radius: 5px;
+  display: none;
+}
+
+.mobile-nav div {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(85, 85, 85);
+  margin: 5px;
+}
+
+.mobile-nav:hover {
+  cursor: pointer;
+  background-color: lightgrey;
+}
+
+
+/* for mobile view*/
+@media (max-width:1048px) {
+
+  nav {
+    height: 70px;
+  }
+
+  nav img {
+    width: 50px;
+  }
+
+  html,
+  body {
+    overflow-x: hidden
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: calc(100vh - 50px);
+    top: 50px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+
+  .langSel {
+    background-color: white;
+
+    font-size: 15px;
+  }
+
+  #lang2 {
+    padding-top: 8px;
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/* ------------- Footer ----------------*/
+
+.footer {
+  display: block;
+  overflow: hidden;
+  padding: 50px 0;
+  box-sizing: border-box;
+  background-color: rgb(6, 15, 43);
+}
+
+.innerfooter {
+  display: block;
+  margin: 0 auto;
+  width: 1000px;
+  height: 100%;
+}
+
+.logo_footer {
+  width: 35%;
+  float: left;
+  height: 100%;
+  display: block;
+}
+
+.logo_footer img {
+  padding-left: 10px;
+  width: 70px;
+  height: auto;
+}
+
+.footer_third {
+  margin-right: 70px;
+  float: left;
+  height: 100%;
+}
+
+.innerfooter .footer_third h1 {
+  font-size: 18px;
+  color: white;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.footer_third a,
+.footer_third div {
+  font-size: 14px;
+  color: white;
+  display: block;
+  letter-spacing: 1px;
+  font-weight: bold;
+  width: 100%;
+  padding-bottom: 5px;
+  text-decoration: none;
+}
+
+.footer_third a:hover {
+  cursor: pointer;
+  color: green;
+}
+
+
+.footer_third li {
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.social {
+  width: 30px;
+  height: auto;
+}
+
+.bar {
+  border-top: solid rgb(173, 173, 173);
+  background-color: rgb(6, 15, 43);
+  padding: 20px 0;
+  text-align: center;
+  color: rgb(173, 173, 173);
+  font-size: 18px;
+}
+
+
+@media(max-width: 882px) {
+
+  .innerfooter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5em;
+  }
+
+  .logo_footer img {
+    padding-left: 0px;
+    width: 50px;
+  }
+
+  .footer_third li {
+    display: block;
+    padding-right: 0px;
+  }
+
+  .footer_third {
+    align-self: center;
+    justify-self: center;
+    margin-right: 0px;
+    width: 115px;
+    float: left;
+    height: 100%;
+  }
+
+  .footer_third a,
+  .footer_third div {
+    font-size: 13px;
+  }
+
+  .innerfooter .footer_third h1 {
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+
+  .innerfooter {
+    width: 60%;
+  }
+
+  .logo_footer {
+    align-self: center;
+    justify-self: center;
+    width: 100px;
+    height: 70px;
+  }
+}
+
+@media(max-width: 612px) {
+  .innerfooter {
+    width: 80%;
+  }
+}
+
+/* ------------- Cookie ----------------*/
+
+.cookiePop {
+  background-color: black;
+  opacity: 0.95;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding-top: 15px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.cookieText {
+  padding-bottom: 10px;
+}
+
+.cookiePop button {
+  margin-bottom: 10px;
+}
+
+
+@media(max-width: 1372px) {
+  .cookiePop {
+    font-size: 14px;
+  }
+}
+
+/* ------------- Home ----------------*/
+.aboutUs {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.vidContainer {
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.vidContainer img {
+  height: auto;
+  justify-self: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+.third {
+  background-color: rgb(243, 243, 243);
+}
+
+.overflowSlide {
+  overflow: hidden;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.gridContainer {
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.square {
+  align-self: center;
+  justify-self: center;
+  min-width: 250px;
+  max-width: 380px;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+}
+
+.linkText {
+  height: 120px;
+}
+
+.info {
+  color: rgb(13, 164, 252);
+}
+
+.imgContainer {
+  overflow: hidden;
+}
+
+.imgContainer2 {
+  overflow: hidden;
+}
+
+.imgContainer3 {
+  overflow: hidden;
+}
+
+.square img {
+  width: 100%;
+  height: auto;
+  transition: transform .5s ease;
+}
+
+.square:hover {
+  cursor: pointer;
+  background-color: rgb(223, 221, 221);
+}
+
+#one:hover .imgContainer img {
+  transform: scale(1.2);
+}
+
+#two:hover .imgContainer2 img {
+  transform: scale(1.2);
+}
+
+#three:hover .imgContainer3 img {
+  transform: scale(1.2);
+}
+
+#textsquare {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.circleContainer {
+  display: grid;
+  width: 15%;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 50px;
+}
+
+.circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: solid grey;
+  justify-self: center;
+}
+
+.circle:hover {
+  cursor: pointer;
+  background-color: grey;
+}
+
+#circleOne {
+  display: none;
+}
+
+#circleTwo {
+  display: none;
+}
+
+#circleThree {
+  display: none;
+}
+
+@media(max-width: 1372px) {
+
+  .gridContainer {
+    grid-template-columns: 47.5% 47.5% 47.5%;
+    transition: transform 0.5s ease-in-out;
+    grid-gap: 5%;
+  }
+
+  #circleOne {
+    display: block;
+    background-color: grey;
+  }
+
+  #circleTwo {
+    display: block;
+  }
+}
+
+@media(max-width: 1048px) {
+
+  .aboutUs {
+    width: 90%;
+  }
+
+  .overflowSlide {
+    width: 90%;
+  }
+
+  .main h1 {
+    font-size: 20px;
+  }
+
+  .vidContainer img {
+    height: auto;
+    justify-self: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  .linkText {
+    height: 100px;
+  }
+}
+
+@media(max-width: 612px) {
+
+  .gridContainer {
+    grid-template-columns: 100% 100% 100%;
+    transform: translateX(-100%);
+    grid-gap: 0px;
+  }
+
+  .square {
+    max-width: 100%;
+  }
+
+  .linkText {
+    display: none;
+  }
+
+  .circleContainer {
+    width: 35%;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #circleThree {
+    display: block;
+  }
+
+  #circleOne {
+    background-color: white;
+  }
+
+  #circleTwo {
+    background-color: grey;
+  }
+}
+
+/* ------------- Company ----------------*/
+.company h1 {
+  padding-top: 50px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.vm {
+  width: 60%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.vmContainer {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+}
+
+.vm img {
+  padding-top: 30px;
+  width: 600px;
+  height: auto;
+}
+
+#vision {
+  grid-column: 2;
+  align-self: center;
+  justify-self: left;
+  padding-left: 20px;
+  width: 350px;
+}
+
+#mission {
+  grid-column: 1;
+  align-self: center;
+  padding-right: 20px;
+  width: 350px;
+}
+
+#mPic {
+  grid-column: 2;
+}
+
+.vm h3 {
+  font-style: 'RalewaySemiBold';
+  font-size: 30px;
+}
+
+@media(max-width: 1500px) {
+  .vm img {
+    width: 500px;
+    height: 350px;
+  }
+
+  .vm div {
+    font-size: 16px;
+  }
+
+  .vm {
+    width: 80%;
+  }
+}
+
+.line {
+  width: 40%;
+  margin: 0 auto;
+  border-top: solid rgb(163, 163, 163);
+  padding-bottom: 30px;
+}
+
+.ourTeam {
+  background-color: rgb(236, 236, 236);
+}
+
+.ourTeam h1 {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.team {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 3em;
+  margin: 0 auto;
+  width: 60%;
+  align-items: center;
+  justify-items: center;
+  padding-bottom: 50px;
+}
+
+.member {
+  width: 250px;
+}
+
+.memberName {
+  color: rgb(32, 155, 255);
+  font-size: 22px;
+  font-weight: bold;
+  padding-bottom: 4px;
+}
+
+.title {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+
+.picContainer {
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.pic {
+  width: 100%;
+  ;
+  height: auto;
+  transition: transform .5s ease;
+  border-radius: 50%;
+}
+
+.pic:hover {
+  transform: scale(1.2);
+}
+
+
+@media(max-width: 1048px) {
+
+  .team {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-gap: 2em;
+  }
+
+  #vmLine {
+    width: 60%;
+  }
+
+  .vm img {
+    width: 370px;
+    height: auto;
+  }
+
+  .company h1 {
+    font-size: 28px;
+    padding-top: 30px;
+  }
+
+  .company h3 {
+    font-size: 22px;
+  }
+
+  .pic {
+    width: 150;
+    height: auto;
+  }
+
+  .team {
+    width: 80%;
+  }
+
+  .member li {
+    font-size: 14px;
+  }
+
+  .member span {
+    font-size: 14px;
+  }
+
+  .member {
+    width: 150px;
+    height: 410px;
+  }
+
+  .memberName {
+    font-size: 18px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+
+}
+
+@media(max-width: 900px) {
+  .vm img {
+    width: 100%;
+    height: auto;
+  }
+
+  #vision {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+  }
+
+  #mPic {
+    grid-column: 1;
+  }
+
+  .vmContainer {
+    align-items: center;
+    justify-items: center;
+  }
+
+  #vision {
+    width: 100%;
+    padding: 0;
+  }
+
+  #mission {
+    width: 100%;
+    padding: 0;
+  }
+
+  .vm h1 {
+    text-align: center;
+  }
+}
+
+/* ------------- Products ----------------*/
+
+.products h1 {
+  text-align: center;
+  letter-spacing: 2px;
+  padding-top: 50px;
+}
+
+.products h3 {
+  letter-spacing: 1px;
+}
+
+.bg {
+  width: 60%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.bgContainer {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+}
+
+.bg img {
+  padding-top: 30px;
+  width: 650px;
+  height: auto;
+}
+
+#battery {
+  grid-column: 2;
+  align-self: center;
+  justify-self: left;
+  padding-left: 20px;
+  width: 350px;
+}
+
+#generator {
+  grid-column: 1;
+  align-self: center;
+  padding-right: 20px;
+  width: 350px;
+}
+
+#gPic {
+  grid-column: 2;
+}
+
+.bg h3 {
+  font-style: 'RalewaySemiBold';
+  font-size: 30px;
+}
+
+#batteryVid {
+  padding-top: 50px;
+  margin: 0 auto;
+  width: 60%;
+}
+
+#batteryVid img {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 100%;
+  height: auto;
+}
+
+@media(max-width: 1500px) {
+  .bg img {
+    width: 500px;
+    height: 350px;
+  }
+
+  .bg div {
+    font-size: 16px;
+  }
+
+  .bg {
+    width: 80%;
+  }
+}
+
+@media(max-width: 1048px) {
+
+  .products h1 {
+    font-size: 28px;
+  }
+
+  .products h3 {
+    font-size: 24px;
+  }
+
+  .bgContainer img {
+    width: 472px;
+    height: auto;
+  }
+
+  #batteryVid {
+    width: 80%;
+  }
+}
+
+@media(max-width: 980px) {
+  .bg img {
+    width: 100%;
+    height: auto;
+  }
+
+  #battery {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+  }
+
+  #gPic {
+    grid-column: 1;
+  }
+
+  .bgContainer {
+    align-items: center;
+    justify-items: center;
+  }
+
+  #battery {
+    width: 100%;
+    padding: 0;
+  }
+
+  #generator {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* ------------- Investors ----------------*/
+
+#login-form {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+
+#download {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  width: 50%;
+  margin: 0px auto;
+  text-align: center;
+
+}
+
+
+/* ------------- Contact ----------------*/
+
+form textarea {
+  width: 448px;
+  height: 200px;
+}
+
+
+form {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+form li {
+  list-style: none;
+  padding-bottom: 8px;
+}
+
+
+.inText {
+  width: 450px;
+  height: 30px;
+}
+
+/* The container */
+.checkContainer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  height: 28px;
+  font-size: 17.5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkmark:hover {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkContainer input:checked~.checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkContainer input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkContainer .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#checkLink {
+  color: #2196F3;
+}
+
+form input:hover {
+  background-color: #eee;
+}
+
+form textarea:hover {
+  background-color: #eee;
+}
+
+#output {
+  color: red;
+  margin-top: 20px;
+  font-size: 17.5px;
+}
+
+@media(max-width: 1048px) {
+
+  .inText {
+    width: 250px;
+    height: 25px;
+  }
+
+  form textarea {
+    width: 250px;
+    height: 150px;
+  }
+
+  .checkContainer {
+    height: 50px;
+    font-size: 16px;
+  }
+}
+
+
+/* ------------- Impressum ----------------*/
+
+.impressum {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.impContainer {
+  margin: 0 auto;
+  width: 40%;
+  padding-bottom: 100px;
+}
+
+@media(max-width: 1048px) {
+  .impContainer {
+    width: 70%;
+  }
+
+  .impContainer div {
+    font-size: 14px;
+  }
+
+  .impContainer h1 {
+    font-size: 25px;
+  }
+
+  .impContainer h2 {
+    font-size: 16px;
+  }
 }

@@ -1,0 +1,79 @@
+{
+    "Nav": {
+        "Co": "Company",
+        "Pr": "Products",
+        "Inv": "Investors",
+        "Con": "Contact"
+    },
+    "Home": {
+        "Ab": "About us",
+        "Abtext": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+        "Bu": "Learn more",
+        "Ba": "Product 1",
+        "Batext": "Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+        "Ge": "Product 2",
+        "Getext": "Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+        "Inv": "Investors",
+        "Invtext": "Are you an investor? Then get the password and get access to even more information!",
+        "Info": "More Info"
+    },
+    "Comp": {
+        "Vm": "Vision und Mission",
+        "Vtext1": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+        "Vtext2": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+        "Vtext3": "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+        "Mtext1": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+        "Mtext2": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+        "Mtext3": "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+        "Out": "Our Team",
+        "Ph": "Founder and CEO",
+        "Pt": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+        "Nh": "Erfinder und Head R&D",
+        "Nt": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+        "Oh": "Head Marketing",
+        "Ot": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+        "Hh": "Head Business Development",
+        "Ht": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+        "Nih": "Head Finance",
+        "Nit": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+    },
+    "Prod": {
+        "Op": "Our Products",
+        "Btext1": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+        "Btext2": "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+        "Gtext1": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+        "Gtext2": "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+        "Bu": "Back"
+    },
+    "Inve": {
+        "He": "Password",
+        "Su": "Submit",
+        "Hi": "Hello",
+        "Text": "Please click the button below to download the files",
+        "Dl": "Download Files"
+    },
+    "Contact": {
+        "Cu": "Contact us",
+        "Se": "Send",
+        "Su": "Subject",
+        "Ch1": "Yes, I have read the",
+        "Ch2": "Legal Notice",
+        "Ch3": "and i agree."
+    },
+    "Imp": {
+        "Hl": "Company Information",
+        "Num": "Phone: 77777747",
+        "Res": "Responsibility: ",
+        "Adv": "Advocate: ",
+        "Dat": "All pictures are object to a Creative Common Licence (CCO-License), an Unsplash-license or a Pexel-license. The remaining content is copyrighted. All user input data is not saved."
+    },
+    "Footer": {
+        "Ad": "Adress",
+        "Mo": "More",
+        "Inf": "Company Information",
+        "Le": "Legal Notice"
+    },
+    "Cookietext": "This Website uses Cookies. By continuing to use this website, you agree to their use.",
+    "eng": "English",
+    "deu": "Deutsch"
+}

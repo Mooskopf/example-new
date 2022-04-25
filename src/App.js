@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+
+import Footer from "./components/Footer.js"
+import Navbar from "./components/Navbar.js"
+import Cookies from "./components/Cookies.js"
+import Home from "./subsites/Home"
+import Company from "./subsites/Company.js"
+import Impressum from "./subsites/Impressum.js"
+import Investors from "./subsites/Investors.js"
+import Products from "./subsites/Products.js"
+import Contact from "./subsites/Contact.js"
+import Fail from "./subsites/404.js"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path='/' element={<><Navbar /> <Home /></>} />
+          <Route exact path='/company' element={<><Navbar /><Company /></>} />
+          <Route exact path='/investors' element={<><Navbar /><Investors /></>} />
+          <Route exact path='/imprint' element={<><Navbar /><Impressum /></>} />
+          <Route exact path='/products' element={<><Navbar /><Products /></>} />
+          <Route exact path='/contact' element={<><Navbar /><Contact /></>} />
+          <Route exact path='*' element={<><Navbar /><Fail /></>} />
+        </Routes>
+        <Cookies />
+        <Footer />
+      </BrowserRouter>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
